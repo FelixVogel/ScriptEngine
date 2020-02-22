@@ -50,7 +50,7 @@ public class EvalEngine extends Engine {
     }
 
     @Override
-    public void load() {
+    protected void onLoad() {
         try (final FileInputStream fis = new FileInputStream(file)) {
             script = ByteBuffer.allocate(fis.available());
 

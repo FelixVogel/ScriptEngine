@@ -50,7 +50,7 @@ public class FunctionEngine extends Engine {
     }
 
     @Override
-    public void load() {
+    protected void onLoad() {
         try {
             scriptEngine.eval(new FileReader(file));
         } catch (final ScriptException | FileNotFoundException e) {

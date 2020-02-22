@@ -46,15 +46,23 @@ public abstract class Engine {
      */
     public Engine(final File file) {
         this.file = file;
-        this.lastLoaded = file.lastModified();
 
         load();
     }
 
     /**
+     * Called when the script is to be loaded, refreshes the last load time
+     */
+    public void load() {
+        this.lastLoaded = file.lastModified();
+
+        onLoad();
+    }
+
+    /**
      * Called when the script is first loaded or reloaded
      */
-    public abstract void load();
+    protected abstract void onLoad();
 
     /**
      * When this method is called, <b>IF</b> the underlying file was modified, the script will be reloaded
