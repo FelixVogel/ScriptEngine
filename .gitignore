@@ -1,0 +1,19 @@
+# Ignore Everything
+*
+
+# Except Subdirectories
+!/*
+
+# Except Directories
+!/src/**
+
+# Don't version MANIFEST.MF
+MANIFEST.MF
+
+# Don't version .iml
+/*.iml
+
+# Except Files
+!/.gitignore
+!/LICENSE.txt
+
